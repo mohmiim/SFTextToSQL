@@ -15,11 +15,11 @@ Also, the program expects these environment variables to be set:
 
 The main file has a few questions to play with. The questions are based on Snowflake DB: SEC_FILINGS and Schema CYBERSYN, but you should be able to use whatever DB/Schemas you have access to.
 
-Sample Question:
+## Sample Question:
 
-What are the top 10 measure descriptions by frequency?
+**What are the top 10 measure descriptions by frequency?**
 
-Generated SQL:
+## Generated SQL:
 
 ```sql
 SELECT measure_description, COUNT(*) AS frequency
@@ -29,7 +29,7 @@ ORDER BY frequency DESC
 LIMIT 10;
 ```
 
-Output:
+## Output:
 
 | Measure Description | Frequency   |
 |---------------------|-------------|
