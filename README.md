@@ -28,3 +28,19 @@ GROUP BY measure_description
 ORDER BY frequency DESC
 LIMIT 10;
 ```
+
+Output:
+
+| Measure Description | Frequency   |
+|---------------------|-------------|
+| Ending balance      | 2,001,529   |
+| Beginning balance   | 1,956,090   |
+| Total               | 1,780,837   |
+| Revenues            | 1,525,333   |
+| Net income          | 1,367,210   |
+| Revenue             | 1,281,254   |
+| Net sales           | 1,189,114   |
+| Balance             | 1,149,603   |
+| Net loss            |   991,917   |
+| Loans               |   869,803   |
+
