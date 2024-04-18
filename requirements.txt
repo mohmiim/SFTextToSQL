@@ -3,4 +3,5 @@ snowflake-connector-python
 snowflake-sqlalchemy==1.4.6
 flask-sqlalchemy==1.0
 langchain
+langchain-openai
 openai

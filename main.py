@@ -7,13 +7,13 @@ import os
 
 # Q = "How many companies are there in the dataset? Use the fully qualified table name"
 # Q = "How many companies are there in the dataset?"
-Q = "What are the top 10 measure descriptions by frequency?"
+# Q = "What are the top 10 measure descriptions by frequency?"
 # Q = "What are the distinct statements in the report attributes?"
 # Q = "What are the top 10 measures in the Income Statement?"
 # Q = "What are the top 10 measures in the Balance Sheet?"
 # Q = "What are the top 10 measures in the Cover Page? Use the measure description"
 # Q = "What are the distinct metadata types for Net sales for Apple?"
-# Q = "What annual measures are available from the 'ALPHABET INC.' Income Statement?"
+Q = "What annual measures are available from the 'NIKE INC' Income Statement?"
 # Q = "What's the distinct metadata in Alphabet's Income Statement?"
 # Q = "What are the annual 'Revenues' by 'BusinessSegments' for Alphabet?"
 # Q = "What are the quarterly revenues by business segment for Alphabet?"
@@ -36,8 +36,9 @@ ROLE = os.environ['SF_ROLE']
 
 snowFL = SnowFlakeUtil(ACCOUNT, USERNAME, PASSWORD, DB, SCHEMA)
 snowFlkSQL = LangChainSnowFlake(ACCOUNT, USERNAME, PASSWORD, DB, SCHEMA, WH, ROLE)
-sql = snowFlkSQL.to_sql(Q)
+sql = snowFlkSQL.to_sql_and_run(Q)
+#sql = snowFlkSQL.to_sql(Q)
 print(sql)
-print(snowFL.execute_query(sql))
+#print(snowFL.execute_query(sql))
 
 snowFL.close()
